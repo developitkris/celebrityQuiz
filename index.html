@@ -8,10 +8,10 @@
     <title>Celebrity Quiz</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="main">
      <h1>Celebrity Quiz</h1>
      <h6>Please take this quiz to find out what celebrity you relate to...</h6>
-       <form>
+       <form id="quizform">
          <div class="form-group">
            <label for="name" >What is your favorite movie genre?</label>
            <select class="form-control" id="genre">
@@ -22,37 +22,77 @@
             <option value="4">Action</option>
           </select>
          </div>
-         <div class="form-group">
-           <label for="text">What is your age group</label>
+
+         <div class="form-group" id="age">
+          <label for="text">What is your age group?</label>
             <div class="radio">
-             <label>
-               <input type="radio" name="flavor" value="17under">
+            <label>
+            <input type="radio"  value="young">
               17 and under
-             </label>
-             <input type="radio" name="flavor" value="18-35">
+            <input type="radio"  value="young">
              18-35
-           </label>
-           <input type="radio" name="flavor" value="36-55">
+
+            <input type="radio" value="mature">
            36-55
-           <input type="radio" name="flavor" value="56over">
+            <input type="radio" value="mature">
            56 and over
-         </label>
+            </label>
            </div>
          </div>
 
-         <div class="form-group">
-           <label for="birthday-1">What is your birthday?</label>
-           <input type="date" class="form-control" id="birthday-1" placeholder="birthday">
-         </div>
+         <div class="form-group" id="season">
+           <label for="text">What is your season?</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" value="warm"> Spring</input>
+                  <input type="radio"  value="warm"> Summer</input>
+                  <input type="radio" value="chilly"> August</input>
+                  <input type="radio" value="chilly"> Winter</input>
+                </label>
+              </div>
+            </label>
 
-         <button type="submit" class="btn btn-primary" id="enter">Submit Survey</button>
-       </form>
-       <br>
-       <div class="alert alert-info" role="alert" id="thankYou">
-         <p> Thank you for completing this survey! </p>
+      <button type="submit" class="btn btn-primary" id="submit">Submit Quiz</button>
+      </form>
+        <br>
+       <div class="alert alert-info" role="alert" id="findOut">
+        <br>
+        <br>
+        <p> Find out who you match with! </p>
+       </div>
+     </div>
+
+     <!-- Results -->
+     <div class="results">
+       <div class="comedy">
+         <img src="img/jimcarrey.jpeg" value="young warm" id="jimcarrey">
+         <img src="img/steveCarrell.jpeg" value="young chilly" id="steve">
+         <img src="img/adamSandler.jpeg" value="mature warm" id="adam">
+         <img src="img/willFerrell.jpeg" value="mature chilly" id="willf">
        </div>
 
+       <div class="horror">
+         <img src="img/sweeny.jpeg" value="young warm" id="sweeny">
+         <img src="img/helena.jpeg" value="young chilly" id="helena">
+         <img src="img/shining.jpeg" value="mature warm" id="shining">
+         <img src="img/insidious.jpeg" value="mature chilly" id="insidious">
+       </div>
 
-   </div>
+       <div class="drama">
+         <img src="img/wilson.jpeg" value="young warm" id="wilson">
+         <img src="img/julianne.jpeg" value="young chilly" id="julia">
+         <img src="img/jake.jpeg" value="mature warm" id="jake">
+         <img src="img/deniro.jpeg" value="mature chilly" id="deniro">
+       </div>
+
+       <div class="action">
+         <img src="img/scarface.jpeg" value="1" id="scarface">
+         <img src="img/willis.jpeg" value="young chilly" id="willis">
+         <img src="img/transporter.jpeg" value="mature warm" id="jason">
+         <img src="img/wsmith.jpeg" value="mature chilly" id="will">
+       </div>
+
+     </div>
+
   </body>
 </html>
