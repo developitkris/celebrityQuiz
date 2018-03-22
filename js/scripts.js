@@ -21,14 +21,14 @@ function celebrityMatcher(genre, age, season) {
 
 if (genre == 1) { //FOR COMEDY LOVERS
   if (age == "young") {
-      if(season == warm)
+      if(season == "warm")
       {
         return result1;
       } else {
         return result2;
       }
   } else {
-    if(season == warm)
+    if(season == "warm")
     {
       return result3;
     } else {
@@ -39,14 +39,14 @@ if (genre == 1) { //FOR COMEDY LOVERS
 
 if (genre == 2) { //FOR Horror LOVERS
   if (age == "young") {
-      if(season == warm)
+      if(season == "warm")
       {
         return result5;
       } else {
         return result6;
       }
   } else {
-    if(season == warm)
+    if(season == "warm")
     {
       return result7;
     } else {
@@ -57,14 +57,14 @@ if (genre == 2) { //FOR Horror LOVERS
 
 if (genre == 3) { //FOR Drama LOVERS
   if (age == "young") {
-      if(season == warm)
+      if(season == "warm")
       {
         return result9;
       } else {
         return result10;
       }
   } else {
-    if(season == warm)
+    if(season == "warm")
     {
       return result11;
     } else {
@@ -75,14 +75,14 @@ if (genre == 3) { //FOR Drama LOVERS
 
 if (genre == 4) { //FOR Action LOVERS
   if (age == "young") {
-      if(season == warm)
+      if(season == "warm")
       {
         return result13;
       } else {
         return result14;
       }
   } else {
-    if(season == warm)
+    if(season == "warm")
     {
       return result15;
     } else {
@@ -102,16 +102,14 @@ $(document).ready(function(){
     event.preventDefault();
 
     var userGenre = $("#genre").val();
-    var userAge = $("#age");
-    var userSeason = "SUMMER";
+    var userAge = $("input:radio[name=age]:checked").val();
+    var userSeason = $("input:radio[name=season]:checked").val();
 
     console.log("USER ENTERED: "+userGenre+" USER ENTERED: "+userAge+" USER ENTERED: "+userSeason);
 
     var userResult = celebrityMatcher(userGenre, userAge, userSeason);
 
-    if (userResult === "Jim Carrey") {
-      $("#jimcarrey").show(); //be showing the image of the chosen celebrity
-    }
+      $("#"+userResult).show(); //be showing the image of the chosen celebrity
 
 //var radioValue = $("input[name='Celebrity']:checked").val();
 
